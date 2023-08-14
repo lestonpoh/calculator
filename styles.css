@@ -1,11 +1,6 @@
-.title{
-    font-size: 50px;
-    font-weight: bolder;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom:50px
+.container{
+    margin:100px
 }
-
 .calculator{
     margin:auto;
     padding: 15px;
