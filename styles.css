@@ -6,12 +6,8 @@
     margin-bottom:50px
 }
 
-.container{
-    display:flex;
-    justify-content: center;
-    
-}
 .calculator{
+    margin:auto;
     padding: 15px;
     border: solid black;
     height:500px;
@@ -26,8 +22,17 @@
     background-color: lightgray;
     border-radius: 10px;
     margin-bottom:10px;
-    flex:1
+    flex:1;
+    padding:20px;
+    position: relative;
     
+}
+
+#displayText{
+    position: absolute;
+    bottom:20px;
+    right:20px;
+    font-size: 50px;
 }
 
 .buttons{
