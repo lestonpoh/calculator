@@ -40,11 +40,11 @@
     position: absolute;
     bottom:20px;
     right:20px;
-    font-size: 50px;
+    font-size: 34px;
 }
 
 .buttons{
-    flex:3;
+    flex:3.5;
     display:grid;
     grid-template-columns: auto auto auto auto;
     gap:4px;

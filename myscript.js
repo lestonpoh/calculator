@@ -15,14 +15,17 @@ function divide(num1,num2){
 }
 
 function operate(num1,num2,operator){
+    
     if (operator === "add"){
         return add(num1,num2)
     }else if (operator === "minus"){
         return minus(num1,num2)
     }else if (operator === "multiply"){
         return multiply(num1,num2)
-    }else{
+    }else if (operator === "divide"){
         return divide(num1,num2)
+    }else{
+        return num2
     }
 }
 
@@ -60,6 +63,7 @@ buttons.forEach((button)=> button.addEventListener("click",()=>{
     }else if (Object.keys(OPERATORS).includes(button.id)){
         input = displayValue;
         if (input === ""){
+            displayText.textContent = displayValue;
             displayTextTop.textContent = currentValue + " " + OPERATORS[button.id];
         }else if (currentValue === ""){
             currentValue = input;
@@ -74,5 +78,22 @@ buttons.forEach((button)=> button.addEventListener("click",()=>{
         }
         currentOperator = button.id
     
+    }else if (button.id === "equal"){
+        input = displayValue;
+        if (input === ""){
+            displayTextTop.textContent = "";
+            displayText.textContent = currentValue
+            currentOperator = null;
+        }else {
+            
+            currentValue = operate(+currentValue, +input, currentOperator)
+            displayTextTop.textContent = "";
+            displayText.textContent = currentValue
+            currentOperator = null;
+            displayValue = "";
+
+
+        }
+        
     }
 }))
